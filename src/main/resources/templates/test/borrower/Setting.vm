@@ -1,0 +1,95 @@
+#parse("test/borrower/base_borrower.vm")
+    <div class="page-wrapper mdc-toolbar-fixed-adjust">
+      <main class="content-wrapper">
+      <div class="mdc-card"style="width: 1024px;margin-left:300px;padding-bottom: 20px;">
+      <form action="../../doSetting/borrower" method="post" target="_self">
+			<section class="mdc-card__supporting-text">
+                  <div class="mdc-layout-grid__inner">
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
+                  </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
+                      <div class="template-demo">
+                        <div id="demo-tf-box-leading-wrapper">
+                          <div id="tf-box-leading-example" class="mdc-text-field mdc-text-field--box mdc-text-field--with-leading-icon w-100 mdc-text-field--upgraded mdc-ripple-upgraded" style="--mdc-ripple-fg-size:303.975px; --mdc-ripple-fg-scale:1.70971; --mdc-ripple-fg-translate-start:-5.6125px, -112.987px; --mdc-ripple-fg-translate-end:101.325px, -123.987px;">
+                            <i class="material-icons mdc-text-field__icon" tabindex="0">event</i>
+                            <input type="text" name="name" id="tf-box-leading" class="mdc-text-field__input" value="$user.name">
+                            <label  for="tf-box-leading" class="mdc-text-field__label">Your name</label>
+                            <div class="mdc-text-field__bottom-line" style="transform-origin: 146.375px center"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="mdc-card__supporting-text">
+                  <div class="mdc-layout-grid__inner">
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
+                  </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
+                      <div class="template-demo">
+                        <div id="demo-tf-box-leading-wrapper">
+                          <div id="tf-box-leading-example" class="mdc-text-field mdc-text-field--box mdc-text-field--with-leading-icon w-100 mdc-text-field--upgraded mdc-ripple-upgraded" style="--mdc-ripple-fg-size:303.975px; --mdc-ripple-fg-scale:1.70971; --mdc-ripple-fg-translate-start:-5.6125px, -112.987px; --mdc-ripple-fg-translate-end:101.325px, -123.987px;">
+                            <i class="material-icons mdc-text-field__icon" tabindex="0">event</i>
+                            <input type="text" id="tf-box-lead3" class="mdc-text-field__input" value="$user.password">
+                            <label for="tf-box-lead3" class="mdc-text-field__label">Your old password</label>
+                            <div class="mdc-text-field__bottom-line" style="transform-origin: 146.375px center"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+                <section class="mdc-card__supporting-text">
+                  <div class="mdc-layout-grid__inner">
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
+                  </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
+                      <div class="template-demo">
+                        <div id="demo-tf-box-leading-wrapper">
+                          <div id="tf-box-leading-example" class="mdc-text-field mdc-text-field--box mdc-text-field--with-leading-icon w-100 mdc-text-field--upgraded mdc-ripple-upgraded" style="--mdc-ripple-fg-size:303.975px; --mdc-ripple-fg-scale:1.70971; --mdc-ripple-fg-translate-start:-5.6125px, -112.987px; --mdc-ripple-fg-translate-end:101.325px, -123.987px;">
+                            <i class="material-icons mdc-text-field__icon" tabindex="0">event</i>
+                            <input type="text" name="password" id="tf-box-lead14" class="mdc-text-field__input" value="">
+                            <label for="tf-box-lead4"  class="mdc-text-field__label">Your new password</label>
+                            <div class="mdc-text-field__bottom-line" style="transform-origin: 146.375px center"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section> 
+                 <div class="mdc-layout-grid__inner">
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
+                  </div>
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop d-flex align-item-center flex-column">
+                  <a href="../../doQueryAllBook"><button class="mdc-button mdc-button--unelevated mdc-button--compact">
+                      取消修改
+                    </button></a>
+                    </div>
+                                      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop d-flex align-item-center flex-column">
+                    
+                   <button type="submit" class="mdc-button mdc-button--unelevated secondary-filled-button">
+                      确定修改
+                    </button>
+                  </div>
+               
+                 </div>
+      </form>
+                 </div>
+      </main>
+      <!-- partial:../../partials/_footer.html -->
+    
+      <!-- partial -->
+    </div>
+<script>
+function f() {
+    if("$information"=="修改成功"){
+        alert("$information");
+    }
+    if("$information"=="修改失败"){
+        alert("$information");
+    }
+}
+window.onload =f;
+</script>
+#parse("test/bottom.vm")

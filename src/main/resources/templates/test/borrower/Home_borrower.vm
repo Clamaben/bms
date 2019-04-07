@@ -1,0 +1,36 @@
+#parse("test/borrower/base_borrower.vm")
+<main class="content-wrapper">
+
+    <div class="my-card-container">
+        <div class="mdc-card__horizontal-block">
+
+
+            <div class="mdc-card__horizontal-block" style="margin-top:20px;">
+
+                #foreach($var in $bookList)
+                    <div class="mdc-card" style="bcakground:url($var.img_url); margin-right: 30px;margin-left: 30px;">
+
+                        <section class="mdc-card__primary">
+                             <img src="../../../$var.img_url" style="height: 250px;width: 250px;"></img>
+                            <h1 class="mdc-card__title mdc-card__title--large">$var.name</h1>
+                            <h2 class="mdc-card__subtitle"><b>图书类别:</b>$var.type</h2>
+                        </section>
+                        <section class="mdc-card__supporting-text">
+
+                        </section>
+                        <section class="mdc-card__actions">
+                            <a href="../../query">
+                                <button class="mdc-button mdc-button--compact mdc-card__action">书籍详情</button>
+                            </a>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">预约借书</button>
+                        </section>
+                    </div>
+                #end
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+#parse("test/bottom.vm")

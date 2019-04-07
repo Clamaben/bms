@@ -1,0 +1,60 @@
+#parse("test/operator/base_operator.vm")
+<main class="content-wrapper">
+    #foreach($var in $bookList)
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-4">
+                <div class="mdc-card d-flex flex-column">
+                    <div class="mdc-layout-grid__inner flex-grow-1">
+                        <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-3">
+                            <div class="mdc-card" style="margin-right: 30px;margin-left: 30px;" text-align="center">
+                                <img src="$var.img_url" style="height: 250px;width: 250px;"></img>
+                            </div>
+                        </div>
+                        <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6 d-flex align-item-center flex-column">
+                            <h2 class="mdc-card__title mdc-card__title--large text-center mt-2 mb-2">
+                                $var.name
+                            </h2>
+                            <div id="currentBalanceCircle" class="w-100">
+                                <b>种类:</b>$var.type
+                            </div>
+                            <div id="currentBalanceCircle" class="w-100">
+                                <b>描述:</b>$var.descp
+                            </div>
+                            <div id="currentBalanceCircle" class="w-100">
+                                #if ( $var.status==1 )
+                                    <b>在馆</b>
+                                #else
+                                    <b>已借出</b>
+                                #end
+                            </div>
+                        </div>
+                        <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-3">
+
+                            <a href="../../order">
+                                <button class="mdc-button mdc-button--unelevated big-round-corner-button mdc-ripple-upgraded"
+                                        data-mdc-auto-init="MDCRipple"
+                                        style="--mdc-ripple-fg-size:87.3844px;margin-right: 100px; --mdc-ripple-fg-scale:1.83127;top: 100px; --mdc-ripple-fg-translate-start:33.8422px, -21.1578px; --mdc-ripple-fg-translate-end:30.7719px, -28.1578px;">
+                                    书籍借出
+                                </button>
+                            </a>
+                            <a href="../../order">
+                                <button class="mdc-button mdc-button--unelevated big-round-corner-button mdc-ripple-upgraded"
+                                        data-mdc-auto-init="MDCRipple"
+                                        style="--mdc-ripple-fg-size:87.3844px; --mdc-ripple-fg-scale:1.83127;top: 100px; --mdc-ripple-fg-translate-start:33.8422px, -21.1578px; --mdc-ripple-fg-translate-end:30.7719px, -28.1578px;">
+                                    书籍归还
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    #end
+</main>
+
+
+
+
+
+#parse("test/bottom.vm")

@@ -1,0 +1,4 @@
+1,andy,123456,stu,BD
+2,Ziyu Zhang,123456,teacher
+3,Tianao Ge,123456,teacher
+4,Chaofan Zhu,123456,stu,MD

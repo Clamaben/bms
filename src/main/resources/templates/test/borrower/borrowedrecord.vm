@@ -1,0 +1,47 @@
+#parse("test/borrower/base_borrower.vm")
+    <div class="page-wrapper mdc-toolbar-fixed-adjust">
+      <main class="content-wrapper">
+      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
+                <div class="mdc-card table-responsive">
+                    <div class="table-heading px-2 px-1 border-bottom">
+                        <h1 class="mdc-card__title mdc-card__title--large">书籍目录</h1>
+                    </div>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>借阅记录编号</th>
+                            <th>借阅者编号</th>
+                            <th>书籍编号</th>
+                            <th>借阅时间</th>
+                            <th>应还时间</th>
+                            <th>借阅状态</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            #foreach( $record in $borrowerRecord)
+                            <tr>
+                                <td>$record.recordId</td>
+                                <td>$record.borrowerId</td>
+                                <td>$record.bookId</td>
+                                <td>$record.borrowTime</td>
+                                <td>$record.dueTime</td>
+                                <td>
+                                    #if ( $record.status==1 )
+                                        已归还
+                                    #else
+                                        未归还
+                                    #end
+                                </td>
+                            </tr>
+                            #end
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+      </main>
+      <!-- partial:../../partials/_footer.html -->
+    
+      <!-- partial -->
+    </div>
+#parse("test/bottom.vm")
